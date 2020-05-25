@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <title> HTML教學</title>
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- 上面是函式庫，他的好處是很輕量，超好用，有興趣的人可以自己去看原始碼，這邊記得要貼下面才會動 -->
+        <title>navBar實作篇</title>
+    </head>
+ 
+    <h1> H1大小 </h1>
+    <h2> H2大小 </h2>
+    <body>
+        <p>如果要把文字設成<b>粗體</b>的話</p>
+        <p>如果要綜合斜體、粗體跟底線 : <b><i><u> Hello I am here</u></i></b></p>
+        <!--這只是小小備註-->
+    
+        <h2>嗨 ! 我是</h2>
+        <h1><u>Young</u></h1> 
+        <p><b><i>一個喜歡到處吃美食的人嘻嘻</i></b></p>
+        <br> <!--這個是空一格-->
+        <hr> <!--這個是有分隔線-->
+        <p>換行的方式</p>
+
+        <ul>
+            <li>Email : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">young30310@gmail.com</a></li>
+            <li>Phone : + 886-955-765-899</li>
+            <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100002914136045&ref=bookmarks"><img src="../Downloads/facebook.png" width="5%" height=""></img></a></li>
+            <li>Youtube : this is video</li>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fqQmDCVrwrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li><img src="https://i1.wp.com/hulondela.com/wp-content/uploads/2015/04/4a765d5cb92a5-1.jpg?w=550" width="40%" height=""></img></li>
+        </ul>
+
+         <!-- NavBar  -->
+<nav id="index_top"class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <!-- 如果fixed-top拿掉就不會定格在視窗最上面，而是會因為滾動消失  -->
+      <!-- bs的navbar也有dark版本，你可以試著改看看  -->
+    <a class="navbar-brand" href=""><img src="../Downloads/patient.png" width="150" height="150"class="d-inline-block align-top" alt="" loading="lazy"></img>
+      <!-- 你也可以在這邊使用<img>標籤，放你自己的logo，如果不會就去首頁按F12，參考我是怎麼做的  -->
+    </a>
+    <!-- 下面這個button平常看不到，只有響應式的時候才看得到  -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <!-- button_end  -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- active代表現在聚焦在這，你會發現拿掉之後，顏色會變淡  -->
+        <li class="nav-item active">
+          <a class="nav-link " href="#index_top">首頁<span class="sr-only">(current)</span></a>      
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bottom">頁內跳轉</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://www.youtube.com/watch?v=E5wxhZmnvKg">外部連結</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">下拉式選單</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="#跳到哪">選項一</a>
+            <a class="dropdown-item " href="#跳到哪">選項二</a>
+            <a class="dropdown-item " href="#跳到哪">選項三</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item " href="#">其他一</a>
+            <a class="dropdown-item" href="#">其他二</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">補充文字（不能點）</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="這裡叫做placeholder" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- 如果這裡的範例你不喜歡，可以去『https://getbootstrap.com/docs/4.5/components/navbar/』看看-->
+   
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+    </body>
+   
+
+
+</html>
