@@ -1,0 +1,305 @@
+// 計算質數公式
+
+let bool =false;
+for(let i=2;i<=10;i++){
+    for(let j=2;j<i;j++){
+        if(i%j == 0){
+            bool = true;
+            break;
+        }
+    }
+    if  ( bool === false ){
+        console.log(i);
+    }else{
+        bool = false;
+    }
+}
+
+
+let chr = ["chichi","lili","Ali","Jasmine"];
+let arr = new Array();
+
+
+
+let index = Math.floor(Math.random()*4);
+let arrMeal = ['McDonalds','KFC','MosBurger','DingGuaGua','BurgerKing'];
+
+console.log(`今天中餐，我選擇 ${arrMeal[index]}`);
+
+// 以下是案例討論
+
+for (let i=1;i<10;i++){
+    let arr = new Array();
+    arr.push(i);
+}
+
+for (let j=1;j<10;j++){
+    let arrj = new Array();
+    arrj.push(arr);
+}
+
+let arrMeal2 = ['Dumplings','Sandwich','Spaghetti','Juice'];
+console.log(`Today I wanna have some ${arrMeal2[Math.floor(Math.random()*5)]}`);
+
+for(let i=0;i<arrMeal2.length;i++){
+    console.log(arrMeal2[i]);
+}
+
+// 物件導向 ( key-value pair )
+// python 也有 key value
+// Java 則是要用名字命名
+
+let cat ={
+    'legs': 4,
+    'name' : 'Darren',
+    'ability':{
+        'jump':function(){
+            console.log('jump!');
+        },
+        'sound':function(){
+            console.log('Meow~');
+        },
+        'sleep':function(){
+            console.log('ZZZzzz...');
+        }
+    }
+};
+
+console.dir(cat,{depth:null}); 
+// console.dir 可以列出物件 ( 或陣列 )的內容
+
+// 把每個物件變成字串的元素
+let studentA = {
+    id: '10801001',
+    name: 'Alex',
+    age: 18,
+    phone_number: '0911111111'
+    };
+    let studentB = {
+    id: '10801002',
+    name: 'Bill',
+    age: 19,
+    phone_number: '0922222222'
+    };
+    let studentC = {
+    id: '10801003',
+    name: 'Cook',
+    age: 18,
+    phone_number: '0933333333'
+    };
+
+let arrStudent = new Array();
+arrStudent.push(studentA);
+arrStudent.push(studentB);
+arrStudent.push(studentC);
+
+for(let i=0;i<arrStudent.length;i++){
+    console.log(arrStudent[i].name);
+}
+
+// 外面會用到的技巧，但是課堂很少教
+
+studentA.scores ={
+    english:Math.floor(Math.random()*100+1),
+    math : Math.floor(Math.random()*100+10)
+}
+
+// 顯示當前的 [西元年-月-日-分時秒]
+let date = new Date();
+// 下方的問號就是 if else 的概念
+let year,month,day,hour,minute,second;
+year = date.getFullYear();
+month = ((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+//另一種版本 : if( (date.getMonth() + 1) < 10 ) {
+ //month = '0' + (date.getMonth() + 1);
+//} else {
+// month = (date.getMonth() + 1);
+//};
+
+// 剩下下方都差不多 : 先看有沒有 10 位數 在看個位數
+
+//先創建 html 的變數，並把整包裝進去
+
+let html =`
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>計資中心作業管理組</title>
+    <script type="text/javascript" src="http://oper.cc.ntu.edu.tw/clickheat/js/clickheat.js"></script>
+
+    <!-- Bootstrap core CSS  template:https://getbootstrap.com/docs/4.3/examples/jumbotron/-->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!--Custom CSS-->
+    <link href="custom.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <div class="fixed-top ">
+        <div class="jumbotron banner">
+            <div class="container">
+                <h2>歡迎光臨作業管理組</h2>
+                <p class="style6">負責中心計算機系統、機房系帳號之管理與維護，並提供相關資料手冊之各項服務，期能提供穩定的系統環境，有效支援全校性各項研究、教學工作之推行。
+                </p>
+                <p>
+                    <a class="btn btn-primary text10 bannerbtn-shad" role="button" href="http://www.cc.ntu.edu.tw/chinese/divisions/divisions_04.asp">組織與成員 &raquo;</a>
+                    <a class="btn btn-changelang text10 bannerbtn-shad" role="button" href="oper_en.html">English</a>
+                </p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark abs-top bg-blue navbgimage">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navbar-float" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link bg-shadgrad-purple" href="http://www.ntu.edu.tw/">台灣大學首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-shadgrad-purple" href="http://www.cc.ntu.edu.tw/">計資中心首頁</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bg-shadgrad-purple dropdownkeep" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NTU Mail</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="http://webmail.ntu.edu.tw/">Mail 1.0</a>
+                            <a class="dropdown-item" href="http://mail.ntu.edu.tw/">Mail 2.0</a>
+                            <a class="dropdown-item" href="http://ntumail.cc.ntu.edu.tw/">信箱首頁</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bg-shadgrad-purple dropdownkeep" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">畢業校友專區</a>
+                        <div class="dropdown-menu">
+                      <!--     <a class="dropdown-item" href="https://oper.cc.ntu.edu.tw/Graduate">畢業生微軟軟體kivuto網站</a>-->
+                          <!--  <a class="dropdown-item" href="https://kmsvpn.cc.ntu.edu.tw/">KMSVPN認證系統-不支援win10-1709以上版本</a>
+                            <a class="dropdown-item" href="docs/kmsvpn-teach.pdf">KMSVPN認證常見問題教學(.pdf)</a>-->
+                            <a class="dropdown-item" href="docs/alumniusewireless.pdf">校友使用無線網路說明(.pdf)</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    <main role="main">
+
+        <div class="fillblock"></div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <h2>最新消息</h2>
+                    </div>
+                    <div class="row">
+                        <p class="content1">
+                            <span class="text1">2020/6/3</span><br> 畢業生kmsvpn依微軟合約，將不再提供服務。應屆畢業生若需軟體請參考kivuto網站<br>
+                            <span class="text1">2020/5/28</span><br> 畢業生kivuto服務依相關條款，將由kivuto直接提供服務。相關規定請洽:<a href="https://ntu.onthehub.com/WebStore/Welcome.aspx#">kivuto</a><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <h2>帳號業務專區</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <a class="btn bg-shadgrad-blue " role="button" href="http://jsc.cc.ntu.edu.tw/ntucc/account">帳號相關表格</a>
+                            </div>
+                            <div>
+                                <a class="btn bg-shadgrad-blue " role="button" href="docs/ntupwdch0603.doc">計中帳號密碼修改表格</a>
+                            </div>
+                            <div>
+                                <a class="btn bg-shadgrad-blue " role="button" href="docs/ntugspwdch0603.doc">G-SUITE帳號密碼修改表格</a>
+                            </div>
+                            <hr>
+                            <div>
+                                <a class="btn bg-shadgrad-blue " role="button" href="./accountqa/index.html">帳號無法登入常見問題</a>
+                            </div>
+                            <div>
+                                <a class="btn bg-shadgrad-blue " role="button" href="http://changepassword.cc.ntu.edu.tw/">檢查帳號狀態</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <h2>服務專區</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://download.cc.ntu.edu.tw">版權軟體下載(download.cc)</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://my.ntu.edu.tw/meetingroom/">電腦教室借用</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://vdi.ntu.edu.tw">VDI雲端桌面系統</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="http://ossacc.moe.edu.tw/">教育部自由軟體區</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://oper.cc.ntu.edu.tw/posterprint/default.html">大圖輸出</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://oper.cc.ntu.edu.tw/3dPrinter">3D列印服務區</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="http://notice.cc.ntu.edu.tw/">校內訊息轉發</a>
+                            </div>
+                            <div>
+                                <a class="btn btn-secondary btn-shad" role="button" href="https://oper.cc.ntu.edu.tw/fastprint/">快速列印檔案上下載</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class=" footerhr">
+
+        </div>
+        <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+        <pre class="style1">
+國立台灣大學計算機及資訊網路中心 版權所有&copy;2020 
+電話：02-3366-5022 或 02-3366-5023
+傳真：02-3366-5024
+<span style="color: #fff;">Copyright By CY YX TX</span>
+    </pre>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+`;
+
+// JQuery的起手式
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM(html);
+const $ = require('jquery')(window); // 把html包在 $ 裡面
+
+console.log($('a').attr('href')); //去找 a 標籤裡的其中一個屬性
+// 之後就隨便你要撈哪一個標籤的哪一個屬性
+
